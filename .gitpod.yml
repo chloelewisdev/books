@@ -16,3 +16,7 @@ tasks:
 ports:
   - port: 3000
     onOpen: open-preview
+
+vscode:
+  extensions:
+    - octref.vetur@0.34.1
