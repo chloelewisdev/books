@@ -6,6 +6,9 @@ tasks:
     before: echo 'before script'
     init: echo 'init script' # runs during prebuild
     command: echo 'start script'
+  - name: Terminal 2
+    init: npm install
+    command: npm run dev
   - name: Start web server
     init: python -m http.server 8000
 
