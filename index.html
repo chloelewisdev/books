@@ -8,17 +8,23 @@
     </head>
 <body>
     <div id="books-app">
-        <h1>{{header}}</h1>
-        <input v-model="header">
-
+        <h1>{{ header || 'Welcome' }}</h1>
+        <ul>
+            <li v-for="item in items" :key="item.id">{{item.label}}</li>
+        </ul>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>
     <script>
         const bookList = Vue.createApp({
             data(){
-                return {
-                    header: "This is a test"
+                 return {
+                    header: "Book List App",
+                    items: [
+                        {id: 1, label: "Book 1"},
+                        {id: 2, label: "Book 2"},
+                        {id: 3, label: "Book 3"},
+                    ]
                 }
             }
         })
