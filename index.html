@@ -7,6 +7,23 @@
         <title>Book App</title>
     </head>
 <body>
+    <div id="books-app">
+        <h1>{{header}}</h1>
+        <input v-model="header">
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        const bookList = Vue.createApp({
+            data(){
+                return {
+                    header: "This is a test"
+                }
+            }
+        })
+        .mount('#books-app')
+    </script>
 
 </body>
 
